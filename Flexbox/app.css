@@ -1,0 +1,71 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+h1{
+    text-align: center;
+}
+
+#container{
+    background-color: darkgray;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid black;
+    display: flex;
+    /*Alinea los divs al reves*/
+    flex-direction: row-reverse;
+    /*Centramos el flexbox pero con espacio entre ellos*/
+    justify-content: space-evenly ;
+}
+
+/*Aca hace que el primer elemento ocupe todo el ancho*/
+div:nth-of-type(1){
+    flex-grow: 1;
+}
+
+#container div{
+    width: 200px;
+    height: 200px;
+}
+
+#container2{
+    background-color: darkgray;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid black;
+    display: flex;
+    /*Alinea los divs al reves*/
+    flex-direction:column;
+    /*Centramos el flexbox pero con espacio entre ellos*/
+    justify-content: center ;
+    align-items: flex-end;
+    align-content: center;
+}
+
+#container2 div{
+    width: 200px;
+    height: 200px;
+}
+
+#container3{
+    background-color: darkgray;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid black;
+    display: flex;
+    /*Alinea los divs al reves*/
+    flex-direction:row;
+    /*Centramos el flexbox pero con espacio entre ellos*/
+    justify-content: center ;
+    align-items: flex-end;
+    align-content: center;
+}
+
+#container3 div{
+    width: 200px;
+    height: 200px;
+    flex-basis: 400px;
+}

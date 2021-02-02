@@ -1,0 +1,14 @@
+img{
+    width: 22%;
+    padding: 35px;
+}
+
+
+nav{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+    border-bottom: 5px solid gray;
+    width: 50%;
+    padding: 10px;
+}
