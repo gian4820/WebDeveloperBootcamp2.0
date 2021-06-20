@@ -1,0 +1,15 @@
+<!--Incluimos el header con los Partials-->
+<%- include('partials/head.ejs') %> 
+
+<%- include('partials/navbar.ejs') %> 
+
+
+    <h1>This are the UFC Fighters</h1>
+    <ul>
+        <% for(let fighter of ufc){ %> 
+            <li><%=fighter%></li>
+        <%}%> 
+    </ul>
+
+
+<%- include('partials/footer.ejs') %> 

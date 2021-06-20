@@ -8,11 +8,11 @@ Para iniciar la aplicacion debemos:
 const express = require('express');
 const app = express();
 const path = require ('path');
-const redditData = require('./data.json')
+const redditData = require('./data.json');
 
 //aqui ponemos los archivos estaticos 
 //el pàth join lo ponemos para que se pueda  jecutar la carpeta public, sin necesidad de ejecutar node en este directorio
-app.use(express.static (path.join(__dirname, '/public'));
+app.use(express.static (path.join(__dirname, '/public')));
 
 //ejs lo utilizamos para mostrar estructuras HTML desde node
 app.set('view engine', 'ejs');

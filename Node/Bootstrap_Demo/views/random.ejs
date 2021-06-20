@@ -1,0 +1,17 @@
+<!--Incluimos el header con los Partials-->
+<%- include('partials/head.ejs') %> 
+
+<%- include('partials/navbar.ejs') %> 
+
+
+    <h1>The Random number is: <%= random %></h1>
+
+    <% if(random%2=== 0){%> 
+        <h2>Is an even number</h2>
+    <%} else{ %>
+        <h2>Is an odd number</h2>
+        <%}%>
+
+    <h3>Is an <%= random%2===0 ? 'EVEN' : 'ODD' %></h3>
+
+<%- include('partials/footer.ejs') %> 

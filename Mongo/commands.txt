@@ -1,0 +1,33 @@
+* Mongo para iniciar servicio
+* show dbs -> muestra dbs
+* use NombreDatabase -> crea si no la encuentra, y accedes. 
+* db -> te dice en que db estas.
+* show collections -> te dice las colecciones
+
+--------INSERT
+* db.dogs.insertOne({name: "Luna", age: 8, breed: "corgi", catFriendly: false})     Aca insertamos una coleccion
+
+--------FIND
+* db.dogs.find()  Aca, te dice la informacion de la coleccion 
+* db.dogs.find({name: "Luna"})    -> ahi buscamos todos los name Luna en la coleccion Dog
+* db.dogs.findOne ({age: 33})       -> retorna un solo valor
+--------FIND WITH MORE QWERYS
+* db.dog.find({age: {$gt: 4}})          -> el $gt hace referencia al greather than... o mayor que...
+* db.dog.find({age: {$lt: 4}})          -> el $lt hace referencia al less than... o menor que...
+* db.dogs.find({breed: {$in:['Tortuga', 'Conejo']}})        -> Aca seleccionamos los registros que tengan en breed, tortuga y conejo
+* db.dogs.find({breed: {$nin:['Tortuga', 'Conejo']}})        -> Aca seleccionamos los registros que NO tengan en breed, tortuga y conejo
+
+
+
+--------UPDATE
+* db.dogs.updateOne({name: "Aika"}, {$set:{age: 2, breed: "Mantonegro"}})    -> we do an update for the years, and in breed 
+            in the name of Aika. If we put a information that isnt in the db, that info will get saved. 
+db.dogs.updateOne({age: 4}, {$set:{age: 2}, $currentDate: {lastChanged: true}})
+db.movies.updateMany({title: {$in: ['Amadeus', 'Stand by me']}}, {score: 7}).then(res=> console.log(res))
+
+
+--------DELETE
+db.collection.deleteMany()
+db.collection.deleteOne()
+Si agregamos {} dentro del parentesis, sin poner nada, eliminamos todo. 
+
